@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2020 at 12:53 PM
+-- Generation Time: Dec 04, 2020 at 03:01 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -57,7 +57,39 @@ INSERT INTO `answers` (`id`, `answer1`, `answer2`, `answer3`, `answer4`, `answer
 (5, '', '', '', '', '', '', ''),
 (6, 'xcyx', 'xyc', 'xycx', 'xcyx', 'xcyxc', 'xc', 'xc'),
 (7, '', '', '', '', '', '', ''),
-(8, 'vdydfyd', 'ydfydf', 'dyfdfyd', 'dfydf', 'dfydf', 'dyfyd', 'dyfyd');
+(8, 'vdydfyd', 'ydfydf', 'dyfdfyd', 'dfydf', 'dfydf', 'dyfyd', 'dyfyd'),
+(9, '', '', '', '', '', '', ''),
+(10, 'fsdfsdf', 'dfd', 'dsfsdfsd', 'dsfsdf', 'sdfsdf', 'dsfsdf', 'sdfsdfsd'),
+(11, 'fsdfsdf', 'dfd', 'dsfsdfsd', 'dsfsdf', 'sdfsdf', 'dsfsdf', 'sdfsdfsd');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `answers_listening`
+--
+
+CREATE TABLE `answers_listening` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `answer1` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer2` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer3` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer4` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer5` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer6` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer7` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Truncate table before insert `answers_listening`
+--
+
+TRUNCATE TABLE `answers_listening`;
+--
+-- Dumping data for table `answers_listening`
+--
+
+INSERT INTO `answers_listening` (`id`, `answer1`, `answer2`, `answer3`, `answer4`, `answer5`, `answer6`, `answer7`) VALUES
+(1, 'fsdfsdf', 'dfd', 'dsfsdfsd', 'dsfsdf', 'sdfsdf', 'dsfsdf', 'sdfsdfsd');
 
 -- --------------------------------------------------------
 
@@ -227,7 +259,29 @@ INSERT INTO `timestamps` (`id`, `dateTime`, `pageName`) VALUES
 (53, '04/12/2020 01:23:17', 'overviewPage'),
 (54, '04/12/2020 01:23:44', 'listeningPage'),
 (55, '04/12/2020 01:24:26', 'attentionPage'),
-(56, '04/12/2020 01:24:35', '');
+(56, '04/12/2020 01:24:35', ''),
+(57, '04/12/2020 01:56:19', 'overviewPage'),
+(58, '04/12/2020 01:56:21', 'listeningPage'),
+(59, '04/12/2020 01:56:40', ''),
+(60, '04/12/2020 03:37:53', ''),
+(61, '04/12/2020 03:38:27', ''),
+(62, '04/12/2020 03:38:48', ''),
+(63, '04/12/2020 03:43:16', ''),
+(64, '04/12/2020 03:45:17', ''),
+(65, '04/12/2020 03:45:26', 'questionsPage'),
+(66, '04/12/2020 03:47:34', 'questionsPage'),
+(67, '04/12/2020 03:47:49', 'questionsPage'),
+(68, '04/12/2020 03:48:08', 'questionsPage'),
+(69, '04/12/2020 03:48:09', 'questionsPage'),
+(70, '04/12/2020 03:48:10', 'questionsPage'),
+(71, '04/12/2020 03:48:11', 'questionsPage'),
+(72, '04/12/2020 03:48:16', 'questionsPage'),
+(73, '04/12/2020 03:48:36', 'questionsPage'),
+(74, '04/12/2020 03:48:41', 'questionsPage'),
+(75, '04/12/2020 03:51:06', 'questionsPage'),
+(76, '04/12/2020 03:55:14', 'questionsPage'),
+(77, '04/12/2020 03:55:52', 'questionsPage'),
+(78, '04/12/2020 03:59:09', 'questionsPage');
 
 --
 -- Indexes for dumped tables
@@ -237,6 +291,12 @@ INSERT INTO `timestamps` (`id`, `dateTime`, `pageName`) VALUES
 -- Indexes for table `answers`
 --
 ALTER TABLE `answers`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `answers_listening`
+--
+ALTER TABLE `answers_listening`
   ADD UNIQUE KEY `id` (`id`);
 
 --
@@ -265,7 +325,13 @@ ALTER TABLE `timestamps`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `answers_listening`
+--
+ALTER TABLE `answers_listening`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `attention`
@@ -283,7 +349,7 @@ ALTER TABLE `essays`
 -- AUTO_INCREMENT for table `timestamps`
 --
 ALTER TABLE `timestamps`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
