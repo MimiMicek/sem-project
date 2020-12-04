@@ -6,12 +6,10 @@
 html,
 body {
     width: 70vw;
-    /* height: 70vh; */
-    /* position: fixed; */
-    position: inherit;
+    height: 70vh;
+    position: fixed;
     padding: 0;
-    /* margin: 0; */
-    margin: 0 auto;
+    margin: 0;
     top: 0;
     bottom: 0;
     left: 0;
@@ -26,7 +24,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 60px;
     font-family: 'Open Sans', sans-serif;
@@ -168,10 +166,10 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-} */
+}
 
 
-/* input:hover,
+input:hover,
 select:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -246,7 +244,7 @@ select:focus {
     position: absolute;
     top: 65px;
     bottom: 0;
-    left: 0;
+    left: 80px;
     right: 0;
     margin-left: 20%;
     width: 100%;
@@ -581,5 +579,14 @@ input.questions-input {
     text-align: center;
     font-weight: bold;
     text-decoration: underline;
+}
+
+.radio-label{
+    display: initial;
+}
+
+#essay-container{
+    margin-right: 100px !important;
+    padding-right: 20px !important;
 }
 
