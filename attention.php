@@ -11,7 +11,7 @@ require_once 'header.php';
         </p>
         <p class="body-font">E.g. if you see the digit '1', press the spacebar. If you see a digit '3', DO NOT press the spacebar.
         </p>
-        <p class="body-font"> Speed and accuracy are of equal importance. Place your finger on the spacebar and click START.</p>
+        <p class="body-font"> Speed and accuracy are of equal importance. Click START, then immediately after, move your finger to the spacebar.</p>
       </div>
         
     <div id="numbers-container">

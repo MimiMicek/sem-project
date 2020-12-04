@@ -38,7 +38,7 @@ require_once 'header.php';
           <input name="pageName" style="display: none" value="questionsPage">
         <!-- <button id="btnTimestamp" name="timestamp" class="btn-info click">Next</button> -->
 
-
+        <input name="pageName" style="display: none" value="questionsPage">
         <div class="button-wrap-questions no-fixed">
             <button id="btnTimestamp" name="timestamp" class="btn-info click rad-button good flat questions-page-next-btn">Next</button>
         </div>

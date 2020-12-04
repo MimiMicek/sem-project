@@ -5,7 +5,7 @@ require_once 'header.php';
 <body class="container container-maze">
     <div>   
         <h2 class="container-title container-title-maze">Visuospacial & Maze</h2>
-        <p class="no-space">Follow the instructions over each task. <br>Should any unexpected events occur, they are part of the project design. <br> Only click FINISH when you are done with BOTH tasks.</p>
+        <p class="no-space">Solve the following two tasks. <br>If any unexpected events occur, do not worry - they are part of the project design. <br> Only click FINISH once you are done with BOTH tasks.</p>
     </div>
     <hr>
 <div class="maze-page-container">
