@@ -38,9 +38,9 @@ body {
     margin-bottom: 40px;
 }
 
-.listening-title {
+/* .listening-title {
     margin-top: 80px;
-}
+} */
 
 .container-description {
     width: 60%;
@@ -149,7 +149,6 @@ textarea[name='essay'] {
     border: solid 1px black;
 }
 
-input,
 select {
     transition-property: background-color opacity;
     transition-duration: 0.2s;
@@ -169,8 +168,10 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-}
-input:hover,
+} */
+
+
+/* input:hover,
 select:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -545,6 +546,25 @@ select:focus {
 .questions-container {
     max-width: 960px;
     position: inherit !important;
+}
+
+input.questions-input {
+    width: 10% !important;
+    height: 25px;
+}
+
+.questions-container {
+    margin-top: 10px !important;
+}
+
+.container-title-recollection {
+    margin-bottom: 35px !important;
+    margin-top: 40px;
+}
+
+.questions-container .no-space {
+    margin-top: 0 !important;
+    margin-bottom: 40px;
 }
 
 
