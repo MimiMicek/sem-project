@@ -8,7 +8,7 @@ require_once 'header.php';
 
     <div>
         <h2 class="container-title">Listening Task</h2>
-        <p class="body-font">Please listen carefully to the sound recording.</p>
+        <p class="body-font">Please listen carefully to the sound recording. To start the recording, click on the PLAY button.</p>
         <p class="body-font"></p>
     </div>
 
@@ -136,13 +136,42 @@ require_once 'header.php';
             </div>
         </div>
 
-
         <div id="myModal9" class="modal">
             <div class="modal-content">
                 <span>To close this AD, click the X on the right.</span>
                 <span class="close">&times;</span>
                 <div class="ad-container">
-                    <p>Hold on, a little more left of the audio.</p>
+                    <img src='imgs/mime.jpg' />
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal10" class="modal">
+            <div class="modal-content">
+                <span>To close this AD, click the X on the right.</span>
+                <span class="close">&times;</span>
+                <div class="ad-container">
+                    <img src='imgs/tattoo.jpg' />
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal11" class="modal">
+            <div class="modal-content">
+                <span>To close this AD, click the X on the right.</span>
+                <span class="close">&times;</span>
+                <div class="ad-container">
+                    <img src='imgs/popup.jpg' />
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal12" class="modal">
+            <div class="modal-content">
+                <span>To close this AD, click the X on the right.</span>
+                <span class="close">&times;</span>
+                <div class="ad-container">
+                    <img src='imgs/frappucino.jpg' />
                 </div>
             </div>
         </div>
@@ -158,74 +187,78 @@ require_once 'header.php';
             audioPlaying = true;
             document.querySelector(".buffering").style.visibility = 'visible';
 
-            // 2sec
+            // 20sec
             setTimeout(function(){
                 showAlertModal('myModal1', 1);
-            }, 2000);
+            }, 20000);
 
-            // 3sec
+            // 21sec
             setTimeout(function(){
                 showAlertModal('myModal2', 2);
-            }, 3000);
+            }, 21000);
 
 
 
-            // 22sec
-            setTimeout(showAlert, 22000);     
-
-            // 23sec
+            // 40sec
             setTimeout(function(){
                 showAlertModal('myModal3', 3);
-            }, 23000);
+            }, 40000);
 
-
-
-            // 42sec
+            // 41sec
             setTimeout(function(){
                 showAlertModal('myModal4', 4);
-            }, 42000);
-
-            // 43sec
-            setTimeout(function(){
-                showAlertModal('myModal5', 5);
-            }, 43000);
+            }, 41000);
 
 
 
-            // 62sec
-            setTimeout(function(){
-                showAlert2();
-            }, 62000);
-
-            // 63sec
+            // 60sec
             setTimeout(function(){
                 showAlertModal('myModal6', 6);
-            }, 63000);
+            }, 60000);
+
+            // 61sec
+            setTimeout(function(){
+                showAlertModal('myModal5', 5);
+            }, 61000);
 
 
 
-            // 82sec
+            // 80sec
             setTimeout(function(){
                 showAlertModal('myModal7', 7);
-            }, 82000);
+            }, 80000);
 
 
-            // 85sec
+            // 81sec
             setTimeout(function(){
                 showAlertModal('myModal8', 8);
-            }, 85000);
+            }, 81000);
 
 
 
-
-            // 102
+            // 100sec (1'40)
             setTimeout(function(){
                 showAlertModal('myModal9', 9);
-            }, 102000);
+            }, 100000);
 
-            // 105
-            setTimeout(showAlert3, 105000);    
 
+
+            // 101sec (2min)
+            setTimeout(function(){
+                showAlertModal('myModal10', 10);
+            }, 101000);
+
+
+            // 120sec
+            setTimeout(function(){
+                showAlertModal('myModal11', 11);
+            }, 120000);
+
+
+            // 121sec
+            setTimeout(function(){
+                showAlertModal('myModal12', 12);
+            }, 121000);
 
         });
 

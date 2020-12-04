@@ -2,14 +2,18 @@
 require_once 'header.php';
 
 ?>
-<body class="container">
-    <h2>Please answer Questions 1 to 6:</h2>
-      <form action="apis/save-timestamp-questions-answers.php" method="post">
-          <p>Complete the sentences below.</p>
-          <p>Write NO MORE THAN THREE WORDS for each answer.</p>
-          <h3>Museum of the History of Science</h3>
+<body class="container questions-container">
+    <div>   
+        <h2 class="container-title">Recollection</h2>
+        <p class="body-font">Please fill in the blanks as accurately as you can. If you do not remember the information, just leave the space blank.</p>
+        <p class="body-font"></p>
+    </div>
 
-          <p>1. He works for <input name="answer1"> as Director of Engineering.</p>
+
+      <form action="apis/save-timestamp-questions-answers.php" method="post">
+            <h5 class="container-title listening-title"> - Robots Smarter than Humans by 2029 - </h5>
+
+          <p>1. The scientist Ray Kurzweil works for <input name="answer1"> as Director of Engineering.</p>
 
           <p>2. He is one of the world's leading <input name="answer2"> on artificial intelligence (A.I.). Mr Kurzweil believes computers will be able to learn from experiences, just like humans.</p>
 
@@ -36,7 +40,7 @@ require_once 'header.php';
         <!-- <button id="btnTimestamp" name="timestamp" class="btn-info click">Next</button> -->
 
 
-        <div class = "button-wrap button-wrap-questions">
+        <div class="button-wrap-questions no-fixed">
             <button id="btnTimestamp" name="timestamp" class="btn-info click rad-button good flat questions-page-next-btn">Next</button>
         </div>
     </form>

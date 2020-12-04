@@ -3,6 +3,11 @@ require_once 'header.php';
 
 ?>
 <body class="container maze-page-container">
+    <!-- <div>
+        <h2 class="container-title">Mixed Task</h2>
+        <p class="body-font">You will get a certain amount of time to solve both tasks.</p>
+        <p class="body-font"></p>
+    </div> -->
     <div id="essay-container" class="align-self-center" style="margin: auto">
 
         <form action="apis/save-timestamp-essay-maze.php" method="post">

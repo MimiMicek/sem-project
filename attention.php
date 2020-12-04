@@ -12,22 +12,21 @@ require_once 'header.php';
         <p class="body-font">E.g. if you see the digit '1', press the spacebar. If you see a digit '3', DO NOT press the spacebar.
         </p>
         <p class="body-font"> Speed and accuracy are of equal importance. Place your finger on the spacebar and click START.</p>
-    </div>
+      </div>
         
     <div id="numbers-container">
     </div>
+    <div id="go" CLASS="number-font-size">GO</div>
+
     <div id="number-of-space-pressed">
     </div>
-    <!-- <button id="number-of-space-pressed-btn">PRESS ME</button> -->
-
-    <!-- <div class="button-wrap attention-page-btn-wrap">
-        <button id="btnTimestamp" name="timestamp" class="btn-info click rad-button attention-page-start-btn">Start</button>
-    </div> -->
 
     <form action="apis/save-timestamp-attention.php" method="post">
         <input name="pageName" style="display: none" value="attentionPage">
+        <input name="spacePressed" id="spacePressed" style="visibility: hidden" value="5">
+
         <div class = "button-wrap">
-            <button id="btnTimestamp" name="timestamp" class="btn-info click rad-button good flat btn-next-listening attention-page-next-btn">Next</button>
+          <button id="btnTimestamp" name="timestamp" class="btn-info click rad-button good flat btn-next-listening attention-page-next-btn">Next</button>
         </div>
     </form>
 
@@ -42,21 +41,28 @@ require_once 'header.php';
         let numbersContainer = document.getElementById("numbers-container");
         let noOfSpacePressed = 0;
         let count;
-        let seconds = 45;
+        // let seconds = 5;
+        let seconds = 40;
         let timer;
 
         document.addEventListener('keyup', (e) => {
           if(e.keyCode == 32) {
             noOfSpacePressed++;
             console.log('pressed', noOfSpacePressed, 'times');
+            localStorage.setItem('spacePressed', noOfSpacePressed);
           }
         });
 
         // INITIALIZE ARRAY OF NUMBERS
 
-        for (let i=0; i<10; i++) {
-          arrayOfNumbers.push(Math.floor(i));
+        for (let i=0; i<78; i++) {
+          arrayOfNumbers.push(Math.floor(i/8.1));
         }
+
+        // FOR TESTING
+        // for (let i=0; i<9; i++) {
+        //   arrayOfNumbers.push(Math.floor(i));
+        // }
 
         function shuffleArray(arr) {
           arr.sort(() => Math.random() - 0.5);
@@ -64,7 +70,9 @@ require_once 'header.php';
 
         document.querySelector("#start").addEventListener('click', () => {
           document.querySelector(".container-description").style.visibility = 'hidden';
-          document.querySelector(".attention-page-start-btn").style.visibility = 'hidden';
+          document.querySelector(".attention-page-start-btn").style.display = 'none';
+
+          document.getElementById('go').style.visibility = 'visible';
 
           startTimer();
 
@@ -76,6 +84,7 @@ require_once 'header.php';
         function startNumbers() {
 
           shuffleArray(arrayOfNumbers);
+          console.log(arrayOfNumbers)
           
 
           for (let i=0; i<arrayOfNumbers.length; i++) {
@@ -83,6 +92,7 @@ require_once 'header.php';
                 document.getElementById('start').style.visibility = 'hidden';
                 // setTimeout(function(){console.log(arrayOfNumbers[ind]);}, 1000 * ind);
                 setTimeout(function(){
+                  document.getElementById('go').style.display = 'none';
                   showNumber(arrayOfNumbers[ind]);
                   if(ind === arrayOfNumbers.length-1)
                   // count++;
@@ -96,7 +106,14 @@ require_once 'header.php';
         function showNextBtn() {
           document.querySelector('.attention-page-next-btn').style.visibility = 'visible';
           document.querySelector('.attention-page-next-btn').style.backgroundColor = '#259B24';
-          document.querySelector('#numbers-container').style.visibility = 'hidden';
+
+          let spacePressedInput = document.querySelector('#spacePressed');
+          console.log(spacePressedInput);
+          spacePressedInput.setAttribute('value', noOfSpacePressed);
+
+          console.log(spacePressedInput);
+
+          // document.querySelector('#numbers-container').style.visibility = 'hidden';
         }
 
 
@@ -128,16 +145,19 @@ require_once 'header.php';
 
         function myFunction() {
             if(seconds <= 45) { //I want it to say 1:00, not 60
-              if(seconds<10)
+              if(seconds<10) {
                 document.getElementById("timer").innerHTML = '00:0' + seconds;
+                document.getElementById("timer").classList.add('enhanced-timer');
+              }
               else
                 document.getElementById("timer").innerHTML = '00:' + +seconds;
             }
             if (seconds > 0 ) { // so it doesn't go to -1
                 seconds--;
-            } else {
+            }
+            else {
                 clearInterval(timer);
-                document.getElementById('btnTimestamp').click();
+                // document.getElementById('btnTimestamp').click();
             }
         }
         
@@ -148,6 +168,7 @@ require_once 'header.php';
               }, 1000); // every second
             }
         }
+
 
     </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

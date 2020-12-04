@@ -6,10 +6,12 @@
 html,
 body {
     width: 70vw;
-    height: 70vh;
-    position: fixed;
+    /* height: 70vh; */
+    /* position: fixed; */
+    position: inherit;
     padding: 0;
-    margin: 0;
+    /* margin: 0; */
+    margin: 0 auto;
     top: 0;
     bottom: 0;
     left: 0;
@@ -24,7 +26,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 60px;
     font-family: 'Open Sans', sans-serif;
@@ -34,6 +36,10 @@ body {
     font-family: 'Merriweather', serif;
     text-align: center;
     margin-bottom: 40px;
+}
+
+.listening-title {
+    margin-top: 80px;
 }
 
 .container-description {
@@ -89,10 +95,22 @@ body {
     justify-content: center;
     position: fixed;
     left: 0;
-    bottom: 100px;
+    bottom: 50px;
     width: 100%;
     color: white;
     text-align: center;
+}
+
+.no-fixed {
+    display: flex;
+    justify-content: center;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 /* MAZE AND ESSAY PAGE */
@@ -137,13 +155,13 @@ select {
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     height: 45px;
     width: 150px;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: black;
     display: inline-block;
     font-size: 15px;
     text-align: center;
@@ -154,11 +172,11 @@ select {
 }
 input:hover,
 select:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 input:active,
 select:active {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 input:focus,
 select:focus {
@@ -439,6 +457,26 @@ select:focus {
     width: 40%;
 }
 
+  #myModal9 .modal-content {
+    width: 40%;
+    margin-top: -30px;
+    display: block;
+  }
+
+  #myModal10 .modal-content {
+    margin-left: 35vw;
+    margin-top: 0vh;
+  }
+
+  #myModal11 .modal-content {
+      width: 60%;
+  }
+
+  #myModal12 .modal-content {
+      margin-top: 0;
+      width: 40%;
+  }
+
   /* The Close Button */
   .close {
     color: black;
@@ -470,14 +508,58 @@ select:focus {
   }
 
   #timer {
-    position: absolute;
     font-size: 60px;
-    top: 0;
-    right: 0;
+    margin-top: 50px;
+    text-align: center;
+    /* margin-top: -30px; */
+  }
+
+  .enhanced-timer {
+      color: red;
+      animation-name: stretch; 
+      animation-duration: 0.5s; 
+      animation-timing-function: ease-out; 
+      animation-direction: alternate; 
+      animation-iteration-count: 17; 
+      animation-play-state: running; 
+  }
+
+  @keyframes stretch { 
+    0% { 
+        transform: scale(.5); 
+    } 
+    100% { 
+        transform: scale(1.0); 
+    } 
+} 
+
+  #go {
+      visibility: hidden;
   }
 
 /* QUESTIONS */
 .button-wrap-questions {
     bottom: -20px;
+}
+
+.questions-container {
+    max-width: 960px;
+    position: inherit !important;
+}
+
+
+/* FINISH PAGE */
+.container-finish .tasks-container {
+    text-align: center;
+}
+
+.container-finish .tasks-container a {
+    text-align: center;
+}
+
+.link-to-survey {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
