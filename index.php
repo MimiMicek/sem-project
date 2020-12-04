@@ -19,8 +19,8 @@ ini_set('display_errors', 0);
                 <h5><span class="task-number">Task 2</span>: Sustained Attention</h5>
                 <p class="task-desc">where you will have to press the spacebar when certain stimuli get shown on the screen.</p>
 
-                <h5><span class="task-number">Task 3</span>: Essay & Maze</h5>
-                <p class="task-desc">where you will have to write a short essay and solve a maze.</p>
+                <h5><span class="task-number">Task 3</span>: Visuospatial & Maze </h5>
+                <p class="task-desc">where you will have to choose a matching pattern and solve a maze.</p>
             </div>
             </div>
             <form action="apis/save-timestamp-overview.php" method="post">

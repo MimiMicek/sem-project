@@ -5,7 +5,7 @@ require_once 'header.php';
 <body class="container questions-container">
     <div>   
         <h2 class="container-title container-title-recollection">Recollection - Robots Smarter than Humans by 2029</h2>
-        <p class="body-font no-space">Please fill in the blanks as accurately as you can with one word. If you do not remember the information, just leave the space blank.</p>
+        <p class="body-font no-space">Please fill in the blanks as accurately as you can, using one word. If you do not remember the word, just leave the space blank.</p>
     </div>
 
 

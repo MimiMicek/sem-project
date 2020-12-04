@@ -2,77 +2,83 @@
 require_once 'header.php';
 
 ?>
-<body class="container maze-page-container">
-<div id="essay-container" class="align-self-center" style="margin: auto">
-    <p class="body-font" style="font-size: 14px">Desctiption</p>
-    <form id="task1" method="post">
-        <!--<label>Please write a short essay of around 150 words on the subject: </label><br>
-        <h4> If you were to create a robot, what would that robot do?</h4>
-        <textarea name="essay" maxlength="500" rows="20" cols="100"></textarea><br><br>
-        <input name="pageName" style="display: none" value="essayMazePage">-->
-        <img style="width: 20%; height: 20%; position: center" src="../sem-project-group-u/imgs/task1.png">
-        <p class="body-font" style="font-size: 14px">Which cube cannot be made based on the unfolded cube?</p>
-        <label for="radio" class="radio-label">
-            <input class="radio" type="radio" name="answer1" value="answer1-task1" checked>
-            <img style="width: 15%; height: 15%" src="../sem-project-group-u/imgs/answer1-task1.png">
-            <input class="radio" type="radio" name="answer1" value="answer2-task1" checked>
-            <img style="width: 15%; height: 15%" src="../sem-project-group-u/imgs/answer2-task1.png">
-        </label>
-        <label for="radio" class="radio-label">
-            <input class="radio" type="radio" name="answer1" value="answer3-task1" checked>
-            <img style="width: 15%; height: 15%" src="../sem-project-group-u/imgs/answer3-task1.png">
-            <input class="radio" type="radio" name="answer1" value="answer4-task1" checked>
-            <img style="width: 15%; height: 15%" src="../sem-project-group-u/imgs/answer4-task1.png">
-        </label>
-    </form>
+<body class="container container-maze">
+    <div>   
+        <h2 class="container-title container-title-maze">Visuospacial & Maze</h2>
+        <p class="no-space">Follow the instructions over each task. <br>Should any unexpected events occur, they are part of the project design. <br> Only click FINISH when you are done with BOTH tasks.</p>
+    </div>
     <hr>
-    <form id="task3" method="post">
-        <img style="width: 20%; height: 20%; position: center" src="../sem-project-group-u/imgs/task3.svg">
-        <p class="body-font" style="font-size: 14px">Which figure is a rotation of the object?</p>
-        <label for="radio" class="radio-label">
-            <input class="radio" type="radio" name="answer2" value="answer1-task3" checked>
-            <img style="width: 20%; height: 20%" src="../sem-project-group-u/imgs/answer1-task3.svg">
-            <input class="radio" type="radio" name="answer2" value="answer2-task3" checked>
-            <img style="width: 20%; height: 20%" src="../sem-project-group-u/imgs/answer2-task3.svg">
-        </label>
-        <label for="radio" class="radio-label">
-            <input class="radio" type="radio" name="answer2" value="answer3-task3" checked>
-            <img style="width: 20%; height: 20%" src="../sem-project-group-u/imgs/answer3-task3.svg">
-            <input class="radio" type="radio" name="answer2" value="answer4-task3" checked>
-            <img style="width: 20%; height: 20%" src="../sem-project-group-u/imgs/answer4-task3.svg">
-        </label>
-    </form>
-
-</div>
-<div class="button-wrap" >
-    <button id="submit" name="timestamp" class="btn-info rad-button click">Finish</button>
-</div>
-<div id="maze-container">
-    <p class="body-font" style="font-size: 14px">Desctiption</p>
-
-    <div id="page">
-        <div id="Message-Container">
-            <div id="message">
-                <h1>Congratulations!</h1>
-                <p>You are done.</p>
-                <p id="moves"></p>
-                <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
+<div class="maze-page-container">
+    <div id="essay-container" style="margin: auto">
+        <form id="task1" method="post">
+            <p style="font-size: 14px">Which cube cannot be made based on the unfolded cube?</p>
+            <div class="puzzle-img-container">
+                <img style="width: 20%; height: 20%; position: center" src="../sem-project-group-u/imgs/task1.png">
             </div>
-        </div>
-        <div id="menu">
-            <div class="custom-select">
-                <select id="diffSelect">
-                    <!--<option value="10">Easy</option>-->
-                    <option value="15">Medium</option>
-                    <option value="25">Hard</option>
-                    <!--<option value="38">Extreme</option> -->
-                </select>
+            <label for="radio" class="radio-label">
+                <input class="radio" type="radio" name="answer1" value="answer1-task1" checked>
+                <img style="width: 18%; height: 18%" src="../sem-project-group-u/imgs/answer1-task1.png">
+                <input class="radio" type="radio" name="answer1" value="answer2-task1" checked>
+                <img style="width: 18%; height: 18%" src="../sem-project-group-u/imgs/answer2-task1.png">
+            </label>
+            <label for="radio" class="radio-label">
+                <input class="radio" type="radio" name="answer1" value="answer3-task1" checked>
+                <img style="width: 18%; height: 18%" src="../sem-project-group-u/imgs/answer3-task1.png">
+                <input class="radio" type="radio" name="answer1" value="answer4-task1" checked>
+                <img style="width: 18%; height: 18%" src="../sem-project-group-u/imgs/answer4-task1.png">
+            </label>
+        </form>
+        <hr>
+        <form id="task3" method="post">
+            <p style="font-size: 14px">Which figure is a rotation of the object?</p>
+            <div class="puzzle-img-container">
+                <img style="width: 20%; height: 20%; position: center" src="../sem-project-group-u/imgs/task3.svg">
             </div>
-            <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
-        </div>
-        <div id="view">
-            <div id="mazeContainer">
-                <canvas id="mazeCanvas" class="border" height="400" width="400"></canvas>
+            <label for="radio" class="radio-label">
+                <input class="radio" type="radio" name="answer2" value="answer1-task3" checked>
+                <img style="width: 20%; height: 20%" src="../sem-project-group-u/imgs/answer1-task3.svg">
+                <input class="radio" type="radio" name="answer2" value="answer2-task3" checked>
+                <img style="width: 20%; height: 20%" src="../sem-project-group-u/imgs/answer2-task3.svg">
+            </label>
+            <label for="radio" class="radio-label">
+                <input class="radio" type="radio" name="answer2" value="answer3-task3" checked>
+                <img style="width: 20%; height: 20%" src="../sem-project-group-u/imgs/answer3-task3.svg">
+                <input class="radio" type="radio" name="answer2" value="answer4-task3" checked>
+                <img style="width: 20%; height: 20%" src="../sem-project-group-u/imgs/answer4-task3.svg">
+            </label>
+        </form>
+
+    </div>
+    <div class="button-wrap" >
+        <button id="submit" name="timestamp" class="btn-info rad-button click">Finish</button>
+    </div>
+    <div id="maze-container">
+        <p class="body-font body-font-maze-desc" style="font-size: 14px">Using the keys ↑ → ↓ ←, guide the CUCUMBER through the maze over to the CABBAGE.</p>
+
+        <div id="page">
+            <div id="Message-Container">
+                <div id="message">
+                    <h1>Congratulations!</h1>
+                    <p>You are done.</p>
+                    <p id="moves"></p>
+                    <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
+                </div>
+            </div>
+            <div id="menu">
+                <div class="custom-select">
+                    <select id="diffSelect">
+                        <!--<option value="10">Easy</option>-->
+                        <option value="15">Medium</option>
+                        <option value="25">Hard</option>
+                        <!--<option value="38">Extreme</option> -->
+                    </select>
+                </div>
+                <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+            </div>
+            <div id="view">
+                <div id="mazeContainer">
+                    <canvas id="mazeCanvas" class="border" height="600" width="600"></canvas>
+                </div>
             </div>
         </div>
     </div>

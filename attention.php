@@ -106,6 +106,7 @@ require_once 'header.php';
         function showNextBtn() {
           document.querySelector('.attention-page-next-btn').style.visibility = 'visible';
           document.querySelector('.attention-page-next-btn').style.backgroundColor = '#259B24';
+          document.querySelector('#timer').style.visibility = 'hidden';
 
           let spacePressedInput = document.querySelector('#spacePressed');
           console.log(spacePressedInput);
